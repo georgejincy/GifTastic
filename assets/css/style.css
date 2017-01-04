@@ -1,0 +1,29 @@
+*{
+	box-sizing: border-box;
+}
+div{
+	border: 2px dashed red;
+	margin: 10px;
+}
+body{
+	margin: 2px;
+	padding: 10px;
+}
+
+#images-div{
+	float: left;
+	max-width: 900px;
+}
+#form-div{
+	clear: both;
+	max-width: 200px;
+}
+
+.birdButtons{
+	margin-right: 5px;
+	background-color: #006699;
+}
+
+.item{	
+	float: left;
+}

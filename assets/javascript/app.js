@@ -2,19 +2,21 @@
 var birdArray = [	
 				"cockatoo",
 				"parakeet",
-				"african grey parrot",
-				"sun conure",
-				"macaw"
+				"african grey parrot"
 				];
 
 //-------Global Functions--------//
 
 function createButton(){
 
+	//clear  the buttons div
+	$("#buttons-div").empty();
+
 	for (var i = 0, j = birdArray.length; i < j ; i++) {
 		var newButton = $("<button/>", {	
 			'text': birdArray[i],
-			'class': 'birdButtons',
+			'class': 'btn btn-primary birdButtons',
+			'type' : 'button',
 			'value' : birdArray[i]
 			});
 
@@ -75,7 +77,13 @@ $(function(){
         		var rating = results[i].rating;
         		var p = $("<p>").text("Rating: " + rating);
         		var birdImage = $("<img>");
-            	birdImage.attr("src", results[i].images.fixed_height.url);
+        		var stillURL = results[i].images.fixed_height_still.url;
+        		var animateURL = results[i].images.fixed_height.url;
+            	birdImage.attr("src", stillURL);
+            	birdImage.attr("class", "gif");
+            	birdImage.attr("data-state", "still");
+            	birdImage.attr("data-animate", animateURL);
+            	birdImage.attr("data-still", stillURL);
             	gifDiv.prepend(p);
             	gifDiv.prepend(birdImage);
            	 	$("#images-div").prepend(gifDiv);
@@ -83,5 +91,25 @@ $(function(){
         	}
         });
 
+
+ });
+
+ //when an image is clicked animate
+ $("#images-div").on("click", ".gif",  function() {
+ 	console.log("image clicked");
+
+ 	var state = $(this).attr("data-state");
+
+ 	if (state === "still"){
+ 		console.log("state is still");
+
+ 		$(this).attr("src", $(this).attr("data-animate") );
+ 		$(this).attr("data-state", "animate");
+ 	}
+ 	else{
+ 		console.log("state is animate");
+ 		$(this).attr("src", $(this).attr("data-still"));
+ 		$(this).attr("data-state", "still");
+ 	}
 
  });

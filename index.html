@@ -5,6 +5,9 @@
 	<meta charset="UTF-8">
 	<title>GifTastic</title>
 
+	<!-- Latest compiled and minified Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 	<!-- Link to reset CSS file -->
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 
@@ -19,19 +22,27 @@
 <body>
 	
 	<!--All the existing and new buttons created will be created in the 'buttons' div-->
-	<div id = "buttons-div"></div>
+		<div id = "buttons-div"></div>
 
-	<!--The giphy images returned from the giphy api will be dumped here-->
-	<div id = "images-div"></div>
+		<!--The giphy images returned from the giphy api will be dumped here-->
+			<div id = "images-div"></div>
+	
 
-	<!-- This form will be where users will input data for new buttons -->
-    <form id="bird-form">
-      <label for="bird-input">Add a bird</label>
-      <input type="text" id="bird-input"><br>
+			<!-- This form will be where users will input data for new buttons -->
+	
+			<div id = "form-div">
+    			<form id="bird-form">
+      			<label for="bird-input">Add a bird</label>
+      			<input type="text" id="bird-input"><br>
 
-      <!-- This button will trigger our AJAX call -->
-      <input id="find-bird" type="submit" value="Bird Search">
-    </form>
+      			<!-- This button will trigger our AJAX call -->
+      			<input id="find-bird" type="submit" value="Bird Search">
+    			</form>
+    		</div>
+    	
+			 
+   
+	
 
     <!-- Link to JavaScript file -->
     <script src="assets/javascript/app.js"></script>
