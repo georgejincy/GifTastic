@@ -20,25 +20,40 @@
 
 </head>
 <body>
-	
-	<!--All the existing and new buttons created will be created in the 'buttons' div-->
-		<div id = "buttons-div"></div>
 
-		<!--The giphy images returned from the giphy api will be dumped here-->
-			<div id = "images-div"></div>
+		
+		<div class = "container">
+			<!--Page header-->
+			<div class = "jumbotron">
+				<h1>Add your favourite animated movie and click them!</h1>
+			</div>
+			<div class = "well">
+				<!--All the existing and new buttons created will be created in the 'buttons' div-->
+				<div id = "buttons-div"></div>
+			</div>
+
+			<div class = "row">
+				<div class = "col-lg-8 col-md-8 col-sm-8">
+					<!--The giphy images returned from the giphy api will be dumped here-->
+					<div id = "images-div"></div>
+				</div>
 	
 
-			<!-- This form will be where users will input data for new buttons -->
-	
-			<div id = "form-div">
-    			<form id="bird-form">
-      			<label for="bird-input">Add a bird</label>
-      			<input type="text" id="bird-input"><br>
+				<!-- This form will be where users will input data for new buttons -->
+				<div class = "col-lg-4 col-md-4 col-sm-4">
+				<div id = "form-div">
+	    			<form id="movie-form">
+	      			<label for="movie-input">Add an animated movie: </label>
+	      			<input type="text" id="movie-input"><br>
 
-      			<!-- This button will trigger our AJAX call -->
-      			<input id="find-bird" type="submit" value="Bird Search">
-    			</form>
-    		</div>
+	      			<!-- This button will trigger our AJAX call -->
+	      			<input id="find-movie" type="submit" value= "Movie Search">
+	    			</form>
+	    		</div>
+	    		</div>
+
+	    	</div> <!--end of row-->
+    	</div>
     	
 			 
    

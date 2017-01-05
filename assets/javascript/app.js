@@ -1,8 +1,15 @@
 //-------variables------------------//
-var birdArray = [	
-				"cockatoo",
-				"parakeet",
-				"african grey parrot"
+var animmovieArray = [	
+				"iceage",
+				"hotel transylvania",
+				"kung fu panda",
+				"zootopia",
+				"finding nemo",
+				"monsters inc",
+				"ratatouille",
+				"moana",
+				"the lion king",
+				"bambi"
 				];
 
 //-------Global Functions--------//
@@ -12,12 +19,12 @@ function createButton(){
 	//clear  the buttons div
 	$("#buttons-div").empty();
 
-	for (var i = 0, j = birdArray.length; i < j ; i++) {
+	for (var i = 0, j = animmovieArray.length; i < j ; i++) {
 		var newButton = $("<button/>", {	
-			'text': birdArray[i],
-			'class': 'btn btn-primary birdButtons',
+			'text': animmovieArray[i],
+			'class': 'btn btn-primary animmovieButtons',
 			'type' : 'button',
-			'value' : birdArray[i]
+			'value' : animmovieArray[i]
 			});
 
 			newButton.appendTo("#buttons-div");
@@ -31,19 +38,19 @@ $(function(){
 });
 
 // This .on("click") function will create a new button 
- $("#find-bird").on("click", function(event) {
+ $("#find-movie").on("click", function(event) {
 
         // event.preventDefault() can be used to prevent an event's default behavior.
         // Here, it prevents the submit button from trying to submit a form when clicked
         event.preventDefault();
 
         // Here we grab the text from the input box
-        var bird = $("#bird-input").val();
+        var movie = $("#movie-input").val();
 
-        //add the new bird to bird array
-        birdArray.push(bird);
+        //add the new movie to movie array
+        animmovieArray.push(movie);
 
-        //call function createButton to create a new button for the bird
+        //call function createButton to create a new button for the movie
         createButton();
 
     });
@@ -54,15 +61,15 @@ $(function(){
  		//empty the images-div
  		$("#images-div").empty();
 
- 		console.log("Bird Button has been clicked");
+ 		console.log("Movie Button has been clicked");
 
  		console.log("Button clicked is" + $(this).val());
 
- 		var bird = $(this).val();
+ 		var movie = $(this).val();
 
  		// Here we construct our URL
         var queryURL = "http://api.giphy.com/v1/gifs/search?q="+ 
-        	bird + "&limit=10&api_key=dc6zaTOxFJmzC";
+        	movie + "&limit=10&api_key=dc6zaTOxFJmzC";
 
         // hit the queryURL with $ajax, then take the response data and display it in the div with an id of images 
         $.ajax({
@@ -76,16 +83,16 @@ $(function(){
         		var gifDiv = $("<div class='item'>");
         		var rating = results[i].rating;
         		var p = $("<p>").text("Rating: " + rating);
-        		var birdImage = $("<img>");
+        		var movieImage = $("<img>");
         		var stillURL = results[i].images.fixed_height_still.url;
         		var animateURL = results[i].images.fixed_height.url;
-            	birdImage.attr("src", stillURL);
-            	birdImage.attr("class", "gif");
-            	birdImage.attr("data-state", "still");
-            	birdImage.attr("data-animate", animateURL);
-            	birdImage.attr("data-still", stillURL);
+            	movieImage.attr("src", stillURL);
+            	movieImage.attr("class", "gif");
+            	movieImage.attr("data-state", "still");
+            	movieImage.attr("data-animate", animateURL);
+            	movieImage.attr("data-still", stillURL);
             	gifDiv.prepend(p);
-            	gifDiv.prepend(birdImage);
+            	gifDiv.prepend(movieImage);
            	 	$("#images-div").prepend(gifDiv);
 
         	}

@@ -2,26 +2,32 @@
 	box-sizing: border-box;
 }
 div{
-	border: 2px dashed red;
-	margin: 10px;
+	outline-style: dotted;
+	outline-color: orange;
+	/* margin: 2px; */
 }
 body{
-	margin: 2px;
-	padding: 10px;
+	background-color: #e6fff9;
+	/* margin: 2px;
+	padding: 10px; */
+}
+.well{
+	background-color: #ffe6ff;
 }
 
-#images-div{
+/* #images-div{
 	float: left;
-	max-width: 900px;
+	width: 70%;
 }
 #form-div{
-	clear: both;
-	max-width: 200px;
-}
+	float: right;
+	overflow: auto;
+	width: 28%;
+} */
 
-.birdButtons{
+.animmovieButtons, #find-movie{
 	margin-right: 5px;
-	background-color: #006699;
+	background-color: #00cc99;
 }
 
 .item{	
