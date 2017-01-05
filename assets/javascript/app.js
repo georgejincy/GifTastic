@@ -91,8 +91,8 @@ $(function(){
             	movieImage.attr("data-state", "still");
             	movieImage.attr("data-animate", animateURL);
             	movieImage.attr("data-still", stillURL);
-            	gifDiv.prepend(p);
             	gifDiv.prepend(movieImage);
+            	gifDiv.prepend(p);
            	 	$("#images-div").prepend(gifDiv);
 
         	}

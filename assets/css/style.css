@@ -2,34 +2,22 @@
 	box-sizing: border-box;
 }
 div{
-	outline-style: dotted;
-	outline-color: orange;
+	/* outline-style: dotted;
+	outline-color: orange; */
 	/* margin: 2px; */
 }
 body{
 	background-color: #e6fff9;
-	/* margin: 2px;
-	padding: 10px; */
 }
-.well{
+.panel-body{
 	background-color: #ffe6ff;
 }
-
-/* #images-div{
-	float: left;
-	width: 70%;
-}
-#form-div{
-	float: right;
-	overflow: auto;
-	width: 28%;
-} */
-
 .animmovieButtons, #find-movie{
 	margin-right: 5px;
+	margin-bottom: 5px;
 	background-color: #00cc99;
 }
-
 .item{	
 	float: left;
+	margin: 2px;
 }

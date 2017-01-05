@@ -23,24 +23,26 @@
 
 		
 		<div class = "container">
-			<!--Page header-->
-			<div class = "jumbotron">
+			
+			<div class="panel panel-default">
+			<div class="panel-heading">
 				<h1>Add your favourite animated movie and click them!</h1>
 			</div>
-			<div class = "well">
+			<div class = "panel-body">
 				<!--All the existing and new buttons created will be created in the 'buttons' div-->
 				<div id = "buttons-div"></div>
 			</div>
+			</div>
 
 			<div class = "row">
-				<div class = "col-lg-8 col-md-8 col-sm-8">
+				<div class = "col-lg-9 col-md-9 col-sm-9">
 					<!--The giphy images returned from the giphy api will be dumped here-->
 					<div id = "images-div"></div>
 				</div>
 	
 
 				<!-- This form will be where users will input data for new buttons -->
-				<div class = "col-lg-4 col-md-4 col-sm-4">
+				<div class = "col-lg-3 col-md-3 col-sm-3">
 				<div id = "form-div">
 	    			<form id="movie-form">
 	      			<label for="movie-input">Add an animated movie: </label>
