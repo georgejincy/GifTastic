@@ -68,7 +68,7 @@ $(function(){
  		var movie = $(this).val();
 
  		// Here we construct our URL
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q="+ 
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q="+ 
         	movie + "&limit=10&api_key=dc6zaTOxFJmzC";
 
         // hit the queryURL with $ajax, then take the response data and display it in the div with an id of images 
